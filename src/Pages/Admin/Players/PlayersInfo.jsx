@@ -1,7 +1,7 @@
 
 function PlayerInfo() {
   return (
-    <div>PlayerInfo</div>
+    <div>PlayerManagement</div>
   )
 }
 
