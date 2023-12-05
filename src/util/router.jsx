@@ -10,31 +10,29 @@ import AttendanceInfo from "../Pages/Admin/Attendance/AttendanceInfo.jsx";
 import ApplyInfo from "../Pages/Admin/Apply/ApplyInfo.jsx";
 
 
-const router = createBrowserRouter(
+const router = createBrowserRouter([
     {
         path: "/",
         element: <Login/>,
-        children:[
-            {
-                path: "/admin",
-                element: <AdminPage/>,
-                label: "Admin",
-                children: [
-                    { path: 'players', element: <PlayersInfo /> },
-                    { path: 'attendances', element: <AttendanceInfo /> },
-                    { path: 'applys', element: <ApplyInfo /> }
-                ],
-            },
-            {
-                path: "/player",
-                label: "Player",
-                children: [
-                    { path: 'main', element: <PlayerPage /> },
-                    { path: 'apply', element: <PlayerApply component={ApplyForm} /> },
-                    { path: 'apply/result', element: <PlayerResult /> }
-                ],
-            }
-        ]
+    },
+    {
+        path: "admin",
+        element: <AdminPage/>,
+        label: "Admin",
+        children: [
+            {path: 'players', element: <PlayersInfo/>},
+            {path: 'attendances', element: <AttendanceInfo/>},
+            {path: 'applys', element: <ApplyInfo/>}
+        ],
+    },
+    {
+        path: "player",
+        label: "Player",
+        children: [
+            {path: 'main', element: <PlayerPage/>},
+            {path: 'apply', element: <PlayerApply component={ApplyForm}/>},
+            {path: 'apply/result', element: <PlayerResult/>}
+        ],
     }
-)
-export default router
+])
+export default router;

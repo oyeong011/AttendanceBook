@@ -1,15 +1,13 @@
-import ManageBtn from "../../component/ManageBtn"
-import { Routes, Route } from 'react-router-dom';
+import {Outlet} from "react-router-dom";
+
 
 const AdminPage = () => {
     return (
+        <div>
+            <h1>AdminPage</h1>
+            <Outlet/>
+        </div>
 
-        <Routes>
-            <Route path='/' element={<ManageBtn/>}/>
-            <Route path='/players' element={<div>Submit</div>}/>
-            <Route path='/forms' element={<div>SubmitManage</div>}/>
-            <Route path='/add' element={<div>PlayerInfo</div>}/>
-        </Routes>
     )
 }
 
